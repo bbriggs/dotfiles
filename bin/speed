@@ -9,4 +9,4 @@ TXBN=$(</sys/class/net/"$iface"/statistics/tx_bytes)
 RXDIF=$(echo $((RXBN - RXB)) )
 TXDIF=$(echo $((TXBN - TXB)) )
 
-echo -e "$((RXDIF / 1024 / 2))K/s $((TXDIF / 1024 / 2))K/s"
+echo -e "down: $((RXDIF / 1024 / 2))K/s up: $((TXDIF / 1024 / 2))K/s"
