@@ -18,8 +18,8 @@ if [[ $SESSION_TYPE = remote/ssh ]]; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
 
-export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t"                  # $EDITOR should open in terminal
+export ALTERNATE_EDITOR="vi"
+export EDITOR="vim"                  # $EDITOR should open in terminal
 export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI with non-daemon as alternat
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
