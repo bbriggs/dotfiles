@@ -20,7 +20,7 @@ fi
 
 export ALTERNATE_EDITOR="vi"
 export EDITOR="vim"                  # $EDITOR should open in terminal
-export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI with non-daemon as alternat
+export VISUAL="vim"         # $VISUAL opens in GUI with non-daemon as alternat
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
