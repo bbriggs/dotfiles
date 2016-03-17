@@ -5,19 +5,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Start tmux if SSH session
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  SESSION_TYPE=remote/ssh
-else
-  case $(ps -o comm= -p $PPID) in
-    sshd|*/sshd) SESSION_TYPE=remote/ssh;;
-  esac
-fi
-
-if [[ $SESSION_TYPE = remote/ssh ]]; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
-
 export ALTERNATE_EDITOR="vi"
 export EDITOR="vim"                  # $EDITOR should open in terminal
 export VISUAL="vim"         # $VISUAL opens in GUI with non-daemon as alternat
@@ -32,6 +19,7 @@ alias ec="emacs --client &"
 alias et="emacs -t"
 alias eq="qpaeq"
 alias equalizer="qpaeq"
+alias switch="tmux switch -t"
 
 export PATH=$PATH:/home/briggsb/.gem/ruby/2.3.0/bin:/home/briggsb/bin
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
