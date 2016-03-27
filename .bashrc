@@ -20,6 +20,7 @@ alias et="emacs -t"
 alias eq="qpaeq"
 alias equalizer="qpaeq"
 alias switch="tmux switch -t"
+alias attach="tmux attach -t"
 
 export PATH=$PATH:/home/briggsb/.gem/ruby/2.3.0/bin:/home/briggsb/bin
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
