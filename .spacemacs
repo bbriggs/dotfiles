@@ -32,14 +32,11 @@ values."
      vagrant
      ruby
      python
-     spotify-private
-     (rcirc :variables rcirc-enable-znc-support t)
+     ;;spotify-private
+     ess
      puppet
      markdown
      org
-     (geolocation :variables
-                  geolocation-enable-weather-forecast t
-                  geolocation-enable-automatic-theme-changer t)
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
@@ -214,7 +211,7 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters the
    ;; point when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   ;;dotspacemacs-smooth-scrolling t
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
