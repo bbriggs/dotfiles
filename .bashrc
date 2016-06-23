@@ -5,9 +5,9 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-export ALTERNATE_EDITOR="vi"
+export ALTERNATE_EDITOR="vim"
 export EDITOR="vim"                  # $EDITOR should open in terminal
-export VISUAL="vim"         # $VISUAL opens in GUI with non-daemon as alternat
+export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -15,10 +15,11 @@ export VISUAL="vim"         # $VISUAL opens in GUI with non-daemon as alternat
 # User specific aliases and functions
 alias ll="ls -l"
 alias lm="ls -l | more"
-alias ec="emacs --client &"
+alias ec="emacsclient -c -a emacs"
 alias et="emacs -t"
 alias eq="qpaeq"
 alias be="bundle exec"
+alias bu="bundle update"
 alias equalizer="qpaeq"
 alias switch="tmux switch -t"
 alias attach="tmux attach -t"
