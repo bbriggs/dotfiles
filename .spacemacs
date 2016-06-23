@@ -248,6 +248,8 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  ;; Mutt support.
+  (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
   (setq-default dotspacemacs-configuration-layers '(
                                                     (rcirc :variables rcirc-enable-znc-support t)))
   (setq rcirc-server-alist
