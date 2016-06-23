@@ -1,0 +1,16 @@
+[user]
+	email = briggs.brenton@gmail.com
+	name = Bren Briggs
+	signingkey = 8CA3046A
+[color]
+ 	ui = true
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = current
+[commit]
+	gpgsign = true
+[alias]
+	lg = "log --decorate --pretty=format:'%C(yellow)%h%C(reset) %C(green)%G?%C(reset) %C(blue)%an%C(reset) %C(cyan)%cr%C(reset) %s %C(auto)%d%C(reset)' --graph --date-order"
+
+
