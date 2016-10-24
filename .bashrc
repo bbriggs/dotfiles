@@ -12,6 +12,13 @@ export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# Golang stuff
+## Root
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+## gopath
+export GOPATH=~/gocode
+
 # User specific aliases and functions
 alias attach="tmux attach -t"
 alias be="bundle exec"
@@ -28,9 +35,11 @@ alias gds="git diff --staged"
 alias gdu="git diff --unstaged"
 alias gfa="git fetch --all"
 alias gm="git merge"
-alias gp="git push"
+alias gpsh="git push"
+alias gpll="git pull"
 alias gs="git status"
 alias gu="git pull"
+alias kops="${GOPATH}/bin/kops"
 alias ll="ls -l"
 alias lm="ls -l | more"
 alias switch="tmux switch -t"
@@ -55,3 +64,4 @@ export MOON="silteb-famnux-sicbyn-sipbec"
 [ -f /home/briggsb/.travis/travis.sh ] && source /home/briggsb/.travis/travis.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
