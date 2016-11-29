@@ -19,6 +19,10 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 ## gopath
 export GOPATH=~/gocode
 
+# Fix weirdness with MacOS and GPG
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # User specific aliases and functions
 alias attach="tmux attach -t"
 alias be="bundle exec"
@@ -55,7 +59,11 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 source ~/.bash_prompt
 
 # Source some private env vars
-source ~/.tf_vars
+[ -f ~/.tf_vars ] && source ~/.tf_vars
+
+
+# Set kops env vars
+[ -f ~/.kops ] && source ~/.kops
 
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
@@ -65,3 +73,5 @@ export MOON="silteb-famnux-sicbyn-sipbec"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# added by travis gem
+[ -f /Users/brenbriggs/.travis/travis.sh ] && source /Users/brenbriggs/.travis/travis.sh
