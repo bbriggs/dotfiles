@@ -35,7 +35,12 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themese'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'hdima/python-syntax'
+Plug 'hashivim/vim-terraform'
+Plug 'rodjek/vim-puppet'
+Plug 'vim-ruby/vim-ruby'
+Plug 'pearofducks/ansible-vim'
 
 call plug#end()
 
