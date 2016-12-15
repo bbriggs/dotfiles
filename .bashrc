@@ -51,6 +51,7 @@ alias test-acceptance="bundle exec rspec spec/acceptance"
 alias test-spec="bundle exec rake validate lint spec"
 alias tf="terraform"
 alias tfp="terraform plan"
+alias vim="nvim"
 
 export PATH=$PATH:/home/briggsb/.gem/ruby/2.3.0/bin:/home/briggsb/bin
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
