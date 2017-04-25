@@ -12,7 +12,6 @@ if has("unix")
 endif
 
 syntax on
-let g:airline_theme='light'
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -41,6 +40,10 @@ Plug 'hashivim/vim-terraform'
 Plug 'rodjek/vim-puppet'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pearofducks/ansible-vim'
-
+Plug 'morhetz/gruvbox'
 call plug#end()
-
+:set background=dark
+let g:airline_theme='light'
+let g:gruvbox_contrast_light='dark'
+let g:gruvbox_contrast_dark='dark'
+colorscheme gruvbox
