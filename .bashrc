@@ -46,7 +46,7 @@ alias tf="terraform"
 alias tfp="terraform plan"
 alias vim="nvim"
 
-source ~/.bash_prompt
+# source ~/.bash_prompt
 
 # Source some private env vars
 [ -f ~/.tf_vars ] && source ~/.tf_vars
