@@ -15,9 +15,11 @@ export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 # Golang stuff
 ## Root
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-## gopath
-export GOPATH=~/gocode
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin
 
 # Fix weirdness with MacOS and GPG
 GPG_TTY=$(tty)
@@ -25,12 +27,6 @@ export GPG_TTY
 
 # User specific aliases and functions
 alias attach="tmux attach -t"
-alias be="bundle exec"
-alias bu="bundle update"
-alias ec="emacsclient -c -a emacs"
-alias eq="qpaeq"
-alias equalizer="qpaeq"
-alias et="emacs -t"
 alias ga="git add"
 alias gc="git commit"
 alias gcm="git commit -m"
@@ -43,36 +39,17 @@ alias gpsh="git push"
 alias gpll="git pull"
 alias gs="git status"
 alias gu="git pull"
-alias kops="${GOPATH}/bin/kops"
 alias ll="ls -l"
 alias lm="ls -l | more"
 alias switch="tmux switch -t"
-alias test-acceptance="bundle exec rspec spec/acceptance"
-alias test-spec="bundle exec rake validate lint spec"
 alias tf="terraform"
 alias tfp="terraform plan"
 alias vim="nvim"
 
-export PATH=$PATH:/home/briggsb/.gem/ruby/2.3.0/bin:/home/briggsb/bin
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
-#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\[\033[33;1m\]\h \w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$  \n| => "
-#export PS2="| => "
 source ~/.bash_prompt
 
 # Source some private env vars
 [ -f ~/.tf_vars ] && source ~/.tf_vars
 
-
-# Set kops env vars
-[ -f ~/.kops ] && source ~/.kops
-
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
-
-# added by travis gem
-[ -f /home/briggsb/.travis/travis.sh ] && source /home/briggsb/.travis/travis.sh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# added by travis gem
-[ -f /Users/brenbriggs/.travis/travis.sh ] && source /Users/brenbriggs/.travis/travis.sh
