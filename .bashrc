@@ -5,6 +5,20 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# Add local scripts to PATH
+export PATH=$PATH:~/bin
+
+# Detect kernel
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+    platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+    platform='macos'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+    platform='freebsd'
+fi
+
 export ALTERNATE_EDITOR="vim"
 export EDITOR="vim"                  # $EDITOR should open in terminal
 export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
@@ -22,8 +36,15 @@ export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin
 
 # Fix weirdness with MacOS and GPG
-GPG_TTY=$(tty)
-export GPG_TTY
+if [[ "$platform" == "macos" ]]; then
+  GPG_TTY=$(tty)
+  export GPG_TTY
+fi
+
+# MacOS specific aliases
+if [[ "$platform" == "macos" ]]; then
+  alias git="hub"
+fi
 
 # User specific aliases and functions
 alias attach="tmux attach -t"
