@@ -60,13 +60,12 @@ alias gpsh="git push"
 alias gpll="git pull"
 alias gs="git status"
 alias gu="git pull"
-alias ll="ls -l"
+alias ll="ls -lahG"
 alias lm="ls -l | more"
 alias switch="tmux switch -t"
 alias tf="terraform"
 alias tfp="terraform plan"
 alias vim="nvim"
-
 # source ~/.bash_prompt
 
 # Source some private env vars
