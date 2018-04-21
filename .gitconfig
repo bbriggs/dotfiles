@@ -1,7 +1,7 @@
 [user]
-	email = briggs.brenton@gmail.com
+	email = code@fraq.io
 	name = Bren Briggs
-	signingkey = 8CA3046A
+	signingkey = 142C68256CA326F5
 [color]
  	ui = true
 [core]
@@ -9,8 +9,12 @@
 [push]
 	default = current
 [commit]
-	gpgsign = true
+	gpgSign = true
 [alias]
 	lg = "log --decorate --pretty=format:'%C(yellow)%h%C(reset) %C(green)%G?%C(reset) %C(blue)%an%C(reset) %C(cyan)%cr%C(reset) %s %C(auto)%d%C(reset)' --graph --date-order"
 
 
+[gpg]
+	program = /usr/local/bin/krgpg
+[tag]
+	forceSignAnnotated = true
