@@ -12,3 +12,8 @@ fi
 if [ -f /Users/brenbriggs/Downloads/google-cloud-sdk/completion.bash.inc ]; then
   source '/Users/brenbriggs/Downloads/google-cloud-sdk/completion.bash.inc'
 fi
+
+# Added by Krypton
+export GPG_TTY=$(tty)
+
+[ -f "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
