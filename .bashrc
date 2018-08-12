@@ -29,8 +29,10 @@ export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 # Golang stuff
 ## Root
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go
+if [[ "$platorm" == 'macos' ]]; then
+	export GOROOT=/usr/local/opt/go/libexec
+fi
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin
@@ -73,3 +75,6 @@ alias vim="nvim"
 
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
+
+# Rust
+[ -f ~/.cargo.env] && source ~/.cargo/env
