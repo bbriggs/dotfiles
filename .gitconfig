@@ -15,6 +15,6 @@
 
 
 [gpg]
-	program = /usr/local/bin/krgpg
+	program = /usr/bin/krgpg
 [tag]
 	forceSignAnnotated = true
