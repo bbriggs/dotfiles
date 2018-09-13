@@ -33,7 +33,7 @@ if [[ "$platorm" == 'macos' ]]; then
 	export GOROOT=/usr/local/opt/go/libexec
 fi
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOBIN
 export PATH=$PATH:$GOROOT/bin
 
 # Fix weirdness with MacOS and GPG
