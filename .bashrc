@@ -27,7 +27,6 @@ export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 # export SYSTEMD_PAGER=
 
 # Golang stuff
-## Root
 export GOPATH=$HOME/go
 if [[ "$platorm" == 'macos' ]]; then
 	export GOROOT=/usr/local/opt/go/libexec
