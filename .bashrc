@@ -5,6 +5,10 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# Source Liquid prompt (in interactive shells && exists)
+[[ $- = *i* ]] && [[ -f $HOME/.extra/liquidprompt/liquidprompt ]] && source $HOME/.extra/liquidprompt/liquidprompt
+export GPG_TTY=$(tty)
+
 # Add local scripts to PATH
 export PATH=$PATH:~/bin
 
@@ -68,11 +72,15 @@ alias tfp="terraform plan"
 alias vim="nvim"
 # source ~/.bash_prompt
 
+cdu () { cd "${PWD%/$1/*}/$1"; }
+
 # Source some private env vars
-[ -f ~/.tf_vars ] && source ~/.tf_vars
+[ -f ~/.local_vars ] && source ~/.local_vars
 
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
 
 # Rust
 [ -f ~/.cargo.env ] && source ~/.cargo/env
+# added by travis gem
+[ -f /Users/brenbriggs/.travis/travis.sh ] && source /Users/brenbriggs/.travis/travis.sh
