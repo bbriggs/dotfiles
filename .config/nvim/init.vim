@@ -41,9 +41,16 @@ Plug 'rodjek/vim-puppet'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pearofducks/ansible-vim'
 Plug 'morhetz/gruvbox'
+Plug 'fatih/vim-go'
 call plug#end()
 :set background=dark
 let g:airline_theme='light'
 let g:gruvbox_contrast_light='dark'
 let g:gruvbox_contrast_dark='dark'
 colorscheme gruvbox
+
+" Generic stuff
+set foldmethod=syntax
+
+" Golang code folding
+let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
