@@ -44,6 +44,8 @@ Plug 'morhetz/gruvbox'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 :set background=dark
 let g:airline_theme='light'
@@ -56,6 +58,23 @@ set foldmethod=syntax
 
 " Golang code folding
 let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
+
+" terraform config
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
+
+" Hybrid line numbering
+:set number relativenumber
+
+" Toggle between hyrbid and absolute modes when entering insert mode
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 " NerdTree opens, even without a base file
 autocmd StdinReadPre * let s:std_in=1
