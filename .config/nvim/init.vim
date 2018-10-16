@@ -41,7 +41,9 @@ Plug 'rodjek/vim-puppet'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pearofducks/ansible-vim'
 Plug 'morhetz/gruvbox'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 :set background=dark
 let g:airline_theme='light'
@@ -54,3 +56,11 @@ set foldmethod=syntax
 
 " Golang code folding
 let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
+
+" NerdTree opens, even without a base file
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close vim if only window left is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
