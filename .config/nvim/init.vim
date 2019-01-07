@@ -31,6 +31,7 @@ endif
 " Load plugins
 call plug#begin('~/.local/share/nvim/site/plugged')
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
@@ -41,13 +42,16 @@ Plug 'rodjek/vim-puppet'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pearofducks/ansible-vim'
 Plug 'morhetz/gruvbox'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'hashivim/vim-terraform'
 
 call plug#end()
 :set background=dark
+
+" fixes bug with vim-go and polyglot
+let g:polyglot_disabled = ['go']
+
 let g:airline_theme='light'
 let g:gruvbox_contrast_light='dark'
 let g:gruvbox_contrast_dark='dark'
