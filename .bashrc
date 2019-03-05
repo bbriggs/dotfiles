@@ -79,8 +79,3 @@ cdu () { cd "${PWD%/$1/*}/$1"; }
 
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
-
-# Rust
-[ -f ~/.cargo.env ] && source ~/.cargo/env
-# added by travis gem
-[ -f /Users/brenbriggs/.travis/travis.sh ] && source /Users/brenbriggs/.travis/travis.sh
