@@ -33,7 +33,7 @@ export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 # Golang stuff
 export GOPATH=$HOME/go
 if [[ "$platform" == 'macos' ]]; then
-	export GOROOT=/usr/local/opt/go/libexec
+	export GOROOT=/usr/local/go/libexec
 fi
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
