@@ -79,3 +79,7 @@ cdu () { cd "${PWD%/$1/*}/$1"; }
 
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
+
+#GCP Terraform Env
+export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/terraform-admin.json
+export VAULT_ADDR=https://127.0.0.1:8200/
