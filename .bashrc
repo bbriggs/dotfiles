@@ -12,6 +12,9 @@ export GPG_TTY=$(tty)
 # Add local scripts to PATH
 export PATH=$PATH:~/bin
 
+# Add local pip stuff to PATH
+export PATH=$PATH:~/.local/bin
+
 # Detect kernel
 platform='unknown'
 unamestr=`uname`
@@ -50,11 +53,16 @@ if [[ "$platform" == "macos" ]]; then
   alias git="hub"
 fi
 
+if [[ "$platform" == "linux" ]]; then
+	alias "packer"="~/bin/packer"
+fi
+
 # User specific aliases and functions
 alias attach="tmux attach -t"
 alias ga="git add"
 alias gc="git commit"
-alias gcm="git commit -m"
+alias gcm="git commit -s -v -p -m"
+alias gcs="git commit -s -v -p"
 alias gco="git checkout"
 alias gds="git diff --staged"
 alias gdu="git diff --unstaged"
