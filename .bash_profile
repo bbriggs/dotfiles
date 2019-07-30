@@ -19,3 +19,7 @@ export GPG_TTY=$(tty)
 [ -f "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
 #export PATH="$HOME/.cargo/bin:$PATH"
+
+# Java_Home settings
+export JAVA_HOME=jdk-install-dir
+export PATH=$JAVA_HOME/bin:$PATH

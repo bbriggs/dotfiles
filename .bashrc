@@ -33,7 +33,6 @@ export VISUAL="vim"      # $VISUAL opens in GUI with non-daemon as alternat
 # Golang stuff
 export GOPATH=$HOME/go
 
-fi
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$GOROOT/bin
@@ -82,3 +81,12 @@ export MOON="silteb-famnux-sicbyn-sipbec"
 #GCP Terraform Env
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/terraform-admin.json
 export VAULT_ADDR=https://127.0.0.1:8200/
+
+#Auto Complete libraries
+source <(kubectl completion bash)
+source <(minikube completion bash)
+source <(helm completion bash)
+complete -o default -F __start_kubectl k
+complete -C /home/null/.local/bin/vault vault
+complete -C /home/null/.local/bin/consul consul
+export PATH=$PATH:~/.jx/bin
