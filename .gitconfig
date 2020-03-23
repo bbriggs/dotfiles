@@ -16,6 +16,6 @@
 	twomonths = !git log --before={`date "+%Y-%m-01"`} --after={`date -v-2m "+%Y-%m-01"`} --reverse --pretty=format:'%C(yellow)%h%C(reset) %C(green)%G?%C(reset) %C(blue)%an%C(reset) %C(cyan)%cr%C(reset) %s %C(auto)%d%C(reset)' --date-order --reverse
 
 [gpg]
-	program = /usr/bin/krgpg
+	program = /usr/local/bin/krgpg
 [tag]
 	forceSignAnnotated = true
