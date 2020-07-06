@@ -7,6 +7,12 @@ nnoremap <C-H> <C-W><C-H>
 tnoremap <Esc> <C-\><C-n>
 
 set colorcolumn=80
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set list
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 if has("unix")
   let s:uname = system("uname")
@@ -49,7 +55,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 call plug#end()
